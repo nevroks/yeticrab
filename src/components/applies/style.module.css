@@ -1,0 +1,13 @@
+.apply{
+    display: flex;
+
+}
+.apply div{
+    padding: 10px 5px;
+    border: var(--font-color) 1px solid;
+}
+.apply__btn_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
