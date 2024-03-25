@@ -1,6 +1,6 @@
 import {combineReducers, configureStore} from '@reduxjs/toolkit'
-import appliesReducer from "./todo/appliesSlice.ts"
-import adminReducer from "./auth/adminSlice.ts"
+import appliesReducer from "./applies/appliesSlice.ts"
+import adminReducer from "./admin/adminSlice.ts"
 const reducers = combineReducers(
     {
         applies:appliesReducer,
