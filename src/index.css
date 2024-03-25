@@ -124,3 +124,13 @@ h1,h2{
 body{
   background-color: var(--bg-color);
 }
+/*-----------------------------------*/
+/*ui lib*/
+/*-----------------------------------*/
+.g-root {
+  --g-font-family-sans: "Roboto Condensed", sans-serif !important;
+
+
+  --g-button-border-color:var(--font-color);
+
+}
