@@ -4,7 +4,7 @@ import Apply from "./Apply.tsx";
 
 const AppliesList = () => {
     const appliesArray=useAppSelector(state => state.applies)
-    console.log(appliesArray)
+
     return (
         <div>
             {appliesArray.map(apply=>{
