@@ -2,11 +2,10 @@ interface IDeliver{
     firstname:string,
     lastname:string,
     surname:string
-
 }
 export interface IApply{
     id:number,
-    date:number,
+    date:string,
     company:string,
     deliver:string | IDeliver,
     phoneNumber:string,
