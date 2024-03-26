@@ -1,0 +1,12 @@
+.page__content{
+    min-height: 100%;
+    background-color: var(--bg-color);
+    position: relative;
+    z-index: 2;
+    padding: 20px 30px;
+}
+.page_btn__container{
+    left: 30px;
+    top: 40px;
+    position: absolute;
+}
