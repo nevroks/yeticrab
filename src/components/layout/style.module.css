@@ -2,12 +2,13 @@
     background: #212170;
     display: grid;
     grid-template-rows: 75px 92% 75px;
-    height: -webkit-fill-available;
     position: relative;
     z-index: 1;
     min-height: 100vh;
 }
 .page{
     padding: 0 calc(50% - 750px);
-    height: -webkit-fill-available;
+}
+header,footer{
+    padding: 0 calc(50% - 750px);
 }
