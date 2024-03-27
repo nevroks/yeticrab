@@ -5,4 +5,18 @@
     box-shadow: 0px 25px 37px -9px rgba(0,0,0,0.75);
     position: relative;
     z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    width: 65px;
+    height: 50px;
+}
+.header__links{
+    display: flex;
+    column-gap: 20px;
+}
+.header__links p{
+    font-size: 16px;
 }
