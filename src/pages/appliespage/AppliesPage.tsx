@@ -1,4 +1,4 @@
-import React, {useEffect, useMemo} from 'react';
+import {useEffect, useMemo} from 'react';
 import classes from "./style.module.css";
 import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks.tsx";
 import {Button} from "@gravity-ui/uikit";
@@ -13,9 +13,11 @@ const AppliesPage = () => {
     const isAdmin=useAppSelector(state => state.admin.value)
     const countOfApplies=useAppSelector(state => state.applies.length)
     const dispatch=useAppDispatch()
+
+
     const newApply:IApply=useMemo(()=>{
         return {
-            id:countOfApplies+1,
+            "id":countOfApplies+1,
             date:`${getFormattedDate()}`,
             company:"Название компании клиента",
             deliver:"ФИО перевозчика",
@@ -40,18 +42,16 @@ const AppliesPage = () => {
     }
     const handleAddApply=()=>{
         dispatch(addApply(newApply))
-        console.log(newApply)
     }
     return (
         <div className={classes.page__content}>
             <div className={classes.page_btn__container}>
-                <div>
-                    <Button onClick={clickHandler} view="normal" size="l">{isAdmin ? 'Войти в режим пользователя' : 'Войти в режим редактирования'}</Button>
-                    {isAdmin && <Button onClick={handleAddApply}>Добавить заявку</Button>}
+                    <div>
+                        <Button onClick={clickHandler} view="normal" size="l">{isAdmin ? 'Войти в режим пользователя' : 'Войти в режим редактирования'}</Button>
+                        {isAdmin && <Button onClick={handleAddApply}>Добавить заявку</Button>}
+                    </div>
                     <AppliesList/>
-                </div>
             </div>
-
         </div>
     );
 };

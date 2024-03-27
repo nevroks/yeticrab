@@ -12,6 +12,7 @@ export const adminSlice = createSlice({
         toggleAdmin:(state)=>{
             state.value=!state.value
         }
+
     }
 })
 

@@ -127,10 +127,9 @@ body{
 /*-----------------------------------*/
 /*ui lib*/
 /*-----------------------------------*/
-.g-root {
+:root {
   --g-font-family-sans: "Roboto Condensed", sans-serif !important;
-
-
+  --g-color-base-brand:var(--accent-color);
   --g-button-border-color:var(--font-color);
 
 }

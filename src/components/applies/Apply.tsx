@@ -1,4 +1,4 @@
-import React, {FC, useMemo, useState} from 'react';
+import {FC, useMemo, useState} from 'react';
 import classes from "./style.module.css";
 import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks.tsx";
 import {Button, Icon, TextInput} from "@gravity-ui/uikit";
@@ -28,7 +28,6 @@ const Apply:FC<applyPropsType> = ({apply}) => {
     const changes=useMemo(()=>{
         return compareArrays(moddedApply,apply)
     },[apply,moddedApply])
-    console.log(moddedApply)
 
     const saveHandler=()=> {
         dispatch(changeApply(moddedApply))
