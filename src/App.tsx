@@ -1,9 +1,9 @@
 import {Route, Routes} from "react-router-dom";
-import React from "react";
+import {lazy} from "react";
 import Layout from "./components/layout/Layout.tsx";
-import AppliesPage from "./pages/appliespage/AppliesPage.tsx";
-import ApplyPage from "./pages/applypage/ApplyPage.tsx";
-import HomePage from "./pages/homepage/HomePage.tsx";
+const HomePage = lazy(()=>import("./pages/homepage/HomePage.tsx"))
+const AppliesPage = lazy(()=>import("./pages/appliespage/AppliesPage.tsx"))
+const ApplyPage = lazy(()=>import("./pages/applypage/ApplyPage.tsx"))
 
 
 function App() {
