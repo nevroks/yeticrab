@@ -1,13 +1,11 @@
-import React from 'react';
-import {Link, useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useAppSelector} from "../../hooks/reduxHooks.tsx";
-import {Button, Icon, TextInput} from "@gravity-ui/uikit";
+import {Button, Icon} from "@gravity-ui/uikit";
 import {ArrowLeft} from '@gravity-ui/icons';
 import classes from "./style.module.css";
 const ApplyPage = () => {
     const {id}=useParams()
     const navigate=useNavigate()
-    console.log(id)
     const apply=useAppSelector(state => state.applies[Number(id)-1])
     return (
         <div className={classes.page}>
@@ -34,7 +32,7 @@ const ApplyPage = () => {
                 <p>Статус:{apply.status}</p>
             </div>
             <div className={classes.apply__block}>
-                <p><a href="https://ati.su/firms/12345/info">ATI код:{apply.ati}(ссылка)</a></p>
+                <p><a href={`${apply.ati}`}>ATI код:{apply.ati}(ссылка)</a></p>
             </div>
         </div>
     );
